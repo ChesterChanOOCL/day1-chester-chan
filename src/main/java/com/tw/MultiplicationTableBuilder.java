@@ -3,7 +3,7 @@ package com.tw;
 public class MultiplicationTableBuilder {
 
     public static void main(String[] args) {
-        System.out.println(printMultiplicationTable(2,4));
+        System.out.println(build(2,4));
         //        printMultiplicationTable(2, 4);
     }
 
@@ -15,25 +15,34 @@ public class MultiplicationTableBuilder {
 
 
     public static Boolean isStartAndEndNumInRange(int startNumber, int endNumber) {
-        if (startNumber >= 0 && endNumber >= 0) {
+        if (startNumber > 1 && endNumber < 0) {
             return true;
         } else {
-            return null;
+            return false;
         }
     }
 
 
 
-    public static String printMultiplicationTable(int startNumber, int endNumber) {
+    public static String build(int startNumber, int endNumber) {
         String equationsInAString = "" ;
+        if (isStartNumSmallerThanOrEqualToEndNum(startNumber, endNumber)== false){
+            return null;
+        }
+        if (isStartAndEndNumInRange(startNumber, endNumber)== false){
+            return null;
+        }
         for (int i = startNumber; i <= endNumber; i++) {
 
 
 
             for (int j = startNumber; j <= i ;  j++ ) {
-                equationsInAString = equationsInAString + " " +  (j + "*" + i + "=" + (i * j));
+                equationsInAString = equationsInAString  +  (j + "*" + i + "=" + (i * j));
                 if (j == i) {
                     equationsInAString = equationsInAString + "\n";
+                }
+                else {
+                    equationsInAString = equationsInAString + " ";
                 }
             }
 
