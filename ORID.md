@@ -6,13 +6,12 @@ O:
 -	Learn more about the standard format of git commit message
 -	Learn some basics of Java Stream API
 -	Learn ORID
--	What impressed me: 
-o	 Instructors gave so clear instructions 
+  -	What impressed me: The impact that context map gave us to improve the efficiency of development has impressed me a lot. 
 
 
 
 R : Fruitful  
 
-I : the most meaningful aspect is the STANDARD approach to the software development as a Software Dev, since we have different ways to approach a problem but this lesson gave a us a reference to an easy-to-learn  and efficient method
+I : The most meaningful aspect is the STANDARD approach to the software development as a Software Dev, since we have different ways to approach a problem but this lesson gave a us a reference to an easy-to-learn  and efficient method
 
-D: Back to work. I will be more organized during my standup meeting with the taught structure today 
+D: Back to my hometeam for Developing Internal App. Also, I will be more organized during my standup meeting with the taught structure today 
