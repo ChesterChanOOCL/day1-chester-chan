@@ -31,7 +31,7 @@ public static String build(int startNumber, int endNumber) {
 // use multiply function
     return IntStream.rangeClosed(startNumber, endNumber)
             .mapToObj(i -> IntStream.rangeClosed(startNumber, i)
-                    .mapToObj(j -> j + "*" + i + "=" + (i * j))
+                    .mapToObj(j -> j + "*" + i + "=" + multiply(i , j))
                     .collect(Collectors.joining(" ")))
             .collect(Collectors.joining("\n"));
 }
