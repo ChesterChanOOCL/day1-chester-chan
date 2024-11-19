@@ -23,11 +23,18 @@ public class MultiplicationTableBuilder {
         if (!isStartNumSmallerThanOrEqualToEndNum(startNumber, endNumber) || !isStartAndEndNumInRange(startNumber, endNumber)) {
         return null;
         }
-        return IntStream.rangeClosed(startNumber, endNumber)
-            .mapToObj(i -> IntStream.rangeClosed(startNumber, i)
-                    .mapToObj(j -> j + "*" + i + "=" + multiply(i , j))
-                    .collect(Collectors.joining(" ")))
-            .collect(Collectors.joining("\n"));
+        StringBuilder result = new StringBuilder();
+
+        for (int idx = startNumber; idx <= endNumber; idx++) {
+            int i = idx;
+            IntStream.rangeClosed(startNumber, i).forEach(j -> {
+                result.append(j).append("*").append(i).append("=").append(multiply(i, j));
+                result.append(" ");
+            });
+
+            result.append("\n");
+        }
+        return  result.toString().replaceAll("(?m)\\s+$", "");
     }
 
     public int multiply(int num1, int num2) {
