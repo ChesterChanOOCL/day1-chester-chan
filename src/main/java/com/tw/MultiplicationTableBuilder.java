@@ -15,13 +15,12 @@ public class MultiplicationTableBuilder {
     }
 
 
-    // Also Check the case of startnum and endNum exceeding the range
+    // Also Check the case of startnum and endNum exceeding the range and Return false no need else
     public static Boolean isStartAndEndNumInRange(int startNumber, int endNumber) {
         if (startNumber > 1 && startNumber <= 1000 && endNumber > 1  && endNumber <= 1000 ) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 public static String build(int startNumber, int endNumber) {
     if (!isStartNumSmallerThanOrEqualToEndNum(startNumber, endNumber) || !isStartAndEndNumInRange(startNumber, endNumber)) {
@@ -35,9 +34,6 @@ public static String build(int startNumber, int endNumber) {
                     .collect(Collectors.joining(" ")))
             .collect(Collectors.joining("\n"));
 }
-
-
-
     public static int multiply(int num1, int num2) {
         return num1 * num2;
     }
